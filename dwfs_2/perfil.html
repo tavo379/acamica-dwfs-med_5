@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Define el tipo de version de html usada, para este caso html5 -->
+<html lang="en"> <!-- Define el lenguaje a utilizar, esto es interpretado por el navegador -->
+<head> <!-- Delimita el encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Metainformación, determina el formato de codificación -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ↑ Indica a los sistemas de pantallas de alta densidad que deben usar como ancho del documento el ancho de pantalla del dispositivo. -->
+    <title>Primer proyecto DWFS</title> <!-- Define el titulo de la página, esto se ve en la tab del navegador -->
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Lato&display=swap" rel="stylesheet"> 
+    <!-- ↑ Indica un enlace, para este caso es un enlace externo -->
+    
+    <!-- Indica la apartura de los estilos a aplicar -->
+    <style>
+        body {
+            align-items: center; /* propiedad de flexbox para alinear elmentos al centro*/
+            background: linear-gradient(20deg, rgb(219, 112, 147), rgb(218, 163, 87)); /* Color de fondo */
+            color: white; /* Color de la fuente(texto) */
+            height: 100vh; /* Altura del contenerdor, se usa px(pixeles), % (porcentaje), vh( viewport) */
+            display: flex; /* propiedad cajas flexibles*/
+            justify-content: center; /* propiedad de flexbox para alinear elmentos al centro*/
+            flex-direction: column;
+        }
+
+        h1 {
+            font-family: 'Courier Prime', monospace; /* Tipode letra */
+        }
+
+        p {
+            font-weight: bold; /* Ancho de la letra en un editor normal se conoce como negrilla*/
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 2px; /* Espacio entre letras */
+            text-transform: uppercase; /* Propiedad para transforma el texto, mayúsculas, minúsculas ... etc */
+        }
+
+        img {
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            height: auto;
+            max-width: 250px;
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        }
+
+        img:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            cursor: pointer;
+        }
+
+    </style>
+    <!-- Cierre estilos -->
+</head>
+<body>
+    <h1>Mi Perfil</h1> <!-- Etiqueta para definir titulos -->
+    <h2>Hola soy Gustavo Ramírez</h2>
+    <img src="ardilla.jpg" alt="profile">
+    <p>Me gustán las ardillas</p>
+    <p><a href="./index.html"> ←← Volver</a></p>
+</body>
+</html>

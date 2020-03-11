@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- Define el tipo de version de html usada, para este caso html5 -->
+<html lang="en"> <!-- Define el lenguaje a utilizar, esto es interpretado por el navegador -->
+<head> <!-- Delimita el encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Metainformación, determina el formato de codificación -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ↑ Indica a los sistemas de pantallas de alta densidad que deben usar como ancho del documento el ancho de pantalla del dispositivo. -->
+    <title>Primer proyecto DWFS</title> <!-- Define el titulo de la página, esto se ve en la tab del navegador -->
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Lato&display=swap" rel="stylesheet"> 
+    <!-- ↑ Indica un enlace, para este caso es un enlace externo -->
+    
+    <!-- Indica la apartura de los estilos a aplicar -->
+    <style>
+        body {
+            align-items: center; /* propiedad de flexbox para alinear elmentos al centro*/
+            background-color: palevioletred; /* Color de fondo */
+            color: white; /* Color de la fuente(texto) */
+            height: 100vh; /* Altura del contenerdor, se usa px(pixeles), % (porcentaje), vh( viewport) */
+            display: flex; /* propiedad cajas flexibles*/
+            justify-content: center; /* propiedad de flexbox para alinear elmentos al centro*/
+        }
+
+        h1 {
+            font-family: 'Courier Prime', monospace; /* Tipode letra */
+        }
+
+        p {
+            font-weight: bold; /* Ancho de la letra en un editor normal se conoce como negrilla*/
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 2px; /* Espacio entre letras */
+            text-transform: uppercase; /* Propiedad para transforma el texto, mayúsculas, minúsculas ... etc */
+        }
+    </style>
+    <!-- Cierre estilos -->
+</head>
+<body>
+    <h1>!Hola mundo!</h1> <!-- Etiqueta para definir titulos -->
+    <p> Mi primer web de la carrera DWFS </p> <!-- Etiqueta para definir un paragraph (parrafo) -->
+
+    <script>
+        /* 
+            Defino una variable que va a obtener las etiquetas p
+        */
+        var parrafo = document.querySelector('p')
+        /*
+            Aplico un estilo a la etique obtenida anteriormente
+        */
+        parrafo.style.cursor = 'pointer'
+        /* 
+            Agrego un evento que indica que al mouse entrar en la etiqueta obtenida(p) aplicará un estilo
+        */
+        parrafo.addEventListener('mouseenter', function() {
+            parrafo.style.color = '#11619a'
+        })
+        /* 
+            Agrego un evento que indica que al mouse dejar  la etiqueta obtenida(p) aplicará un estilo
+        */
+        parrafo.addEventListener('mouseleave', function() {
+            parrafo.style.color = 'white'
+        })
+        /* 
+            Agrego un evento que indica que al hacer click sobre la etiqueta obtenida(p)
+            se generara un alert en javscript que indicará algo, en este caso un texto simple
+        */
+        parrafo.addEventListener('click', function() {
+            alert("Felicitaciones")
+        })
+
+        var fecha = Date.now(); // Define la fecha actual en milisegundos transcurridos desde el 1 de enero de 1970
+        var paragraph = document.createElement("h1") // crea un elemento h1
+        var node = document.createTextNode(fecha) // crea un nodo de texto 
+        paragraph.appendChild(node) // adjunta un elemento al final del nodo
+        document.body.appendChild(paragraph)
+    </script>
+</body>
+</html>
