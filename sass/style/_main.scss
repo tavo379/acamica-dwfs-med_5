@@ -1,0 +1,21 @@
+
+body {
+    background-color: $background-color;
+    color: $color-primary;
+
+    p {
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+
+            &:hover{
+                color: $color-secondary;
+            }
+        }
+
+        span {
+            color: $color-primary;
+        }
+    }
+}

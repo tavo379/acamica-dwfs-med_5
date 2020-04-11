@@ -1,0 +1,27 @@
+$color-primary: blue;
+$color-secondary: green;
+$background-color: #fff;
+
+%boton {
+    font-size: 32px;
+    border-radius: 15px;
+}
+
+.button{
+    @extend %boton;
+}
+
+.button- {
+    // .button-primary
+
+    &primary{
+        color: gray;
+    }
+
+    // .button-secondary
+    &secondary{
+        color: red;
+       
+    }
+  
+}
