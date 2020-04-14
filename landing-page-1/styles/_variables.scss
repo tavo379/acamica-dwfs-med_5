@@ -1,0 +1,36 @@
+$bg-color: #DDA2FD;
+$text-title-primary: #E83D2C;
+$text-title-secondary: #FFB83D;
+$font-size-title: 4rem;
+$font-size-subtitle: 3rem;
+$font-size-normal-text: 1.3rem;
+
+
+%basic-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg-color($color: red) {
+   background-color: $color;
+}
+
+//medias queries
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+
+
+
+

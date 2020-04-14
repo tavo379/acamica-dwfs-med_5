@@ -1,0 +1,50 @@
+.description {
+    @extend %basic-flex;
+    height: 100vh;
+
+    div {
+        width: 50%;
+        @extend %basic-flex;
+        flex-direction: column;
+    }
+
+    .text-description {
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        h2, p {
+            padding-bottom: 3rem;
+            padding-right: 3rem;
+        }
+    }
+
+    @include for-phone-only{
+        background-color: white;
+    }
+
+    @include for-desktop-up{
+        background-color: yellow;
+    }
+}
+
+.img-description {
+    height: 50vh;
+    img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .description {
+        background-color: red;
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .description {
+        background-color: red;
+        display: block;
+    }
+}
