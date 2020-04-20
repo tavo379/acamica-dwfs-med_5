@@ -34,3 +34,23 @@ p {
         padding-right: 3rem;
     }
 }
+
+/*  Media queries */
+@media screen and (max-width: 900px) {
+
+    h1 {
+        font-size: $font-size-title-rwa;
+    }
+
+    h2 {
+        font-size: $font-size-subtitle-rwa;
+    }
+
+    p {
+        font-size: $font-size-normal-text-rwa;
+    }
+
+    .section {
+        min-height: 40vh;
+    }
+}

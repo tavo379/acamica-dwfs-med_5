@@ -49,8 +49,25 @@ p {
   padding-right: 3rem;
 }
 
+/*  Media queries */
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .section {
+    min-height: 40vh;
+  }
+}
+
 .description {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .description div {
@@ -59,6 +76,10 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.description div h1 {
+  text-align: center;
 }
 
 .description .text-description {
@@ -75,18 +96,6 @@ p {
   padding-right: 3rem;
 }
 
-@media (max-width: 599px) {
-  .description {
-    background-color: white;
-  }
-}
-
-@media (min-width: 1200px) {
-  .description {
-    background-color: yellow;
-  }
-}
-
 .img-description {
   height: 50vh;
 }
@@ -95,17 +104,36 @@ p {
   width: 80%;
 }
 
+/*  Media queries */
 @media screen and (max-width: 900px) {
   .description {
-    background-color: red;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .description {
-    background-color: red;
-    display: block;
+  .description div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .description div h2 {
+    text-align: center;
+  }
+  .description .text-description {
+    padding-top: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .description .text-description h2 {
+    display: none;
+  }
+  .description .text-description p {
+    padding-right: 0;
+    text-align: center;
+  }
+  .description .img-description {
+    height: 50vh;
+  }
+  .description .img-description img {
+    width: 50%;
   }
 }
 
@@ -129,10 +157,18 @@ p {
   height: 2rem;
   margin: 1rem 0 2rem 0;
   font-size: 1.3rem;
+  background-color: white;
 }
 
 .contact-form form input[type=submit] {
   border-radius: 1rem;
   border-color: white;
+}
+
+/*  Media queries */
+@media screen and (max-width: 900px) {
+  .contact-form form input, .contact-form form select, .contact-form form textarea {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

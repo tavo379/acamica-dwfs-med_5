@@ -1,11 +1,16 @@
 .description {
     @extend %basic-flex;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 
     div {
         width: 50%;
         @extend %basic-flex;
         flex-direction: column;
+
+        h1 {
+            text-align: center;
+        }
     }
 
     .text-description {
@@ -17,14 +22,6 @@
             padding-right: 3rem;
         }
     }
-
-    @include for-phone-only{
-        background-color: white;
-    }
-
-    @include for-desktop-up{
-        background-color: yellow;
-    }
 }
 
 .img-description {
@@ -34,17 +31,43 @@
     }
 }
 
+
+/*  Media queries */
 @media screen and (max-width: 900px) {
+    
     .description {
-        background-color: red;
         display: block;
+
+        div {
+            //text-align: center;
+            width: 90%;
+            margin: 0 auto;
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .text-description{
+            padding-top: 3rem;
+            align-items: center;
+
+            h2 {
+                display: none;
+            }
+            p {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
+        .img-description {
+            
+            height: 50vh;
+            img {
+                width: 50%;
+            }
+        }
     }
 }
 
-
-@media screen and (max-width: 600px) {
-    .description {
-        background-color: red;
-        display: block;
-    }
-}

@@ -5,6 +5,11 @@ $font-size-title: 4rem;
 $font-size-subtitle: 3rem;
 $font-size-normal-text: 1.3rem;
 
+// responsive
+$font-size-title-rwa: 2.5rem;
+$font-size-subtitle-rwa: 1.8rem;
+$font-size-normal-text-rwa: 1rem;
+
 
 %basic-flex {
     display: flex;
@@ -15,22 +20,6 @@ $font-size-normal-text: 1.3rem;
 @mixin bg-color($color: red) {
    background-color: $color;
 }
-
-//medias queries
-@mixin for-phone-only {
-    @media (max-width: 599px) {
-        @content;
-    }
-}
-
-
-@mixin for-desktop-up {
-    @media (min-width: 1200px) {
-        @content;
-    }
-}
-
-
 
 
 
